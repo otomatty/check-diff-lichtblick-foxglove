@@ -1,0 +1,69 @@
+Only in create-foxglove-extension/examples/webworker: eslint.config.js
+Only in create-lichtblick-extension/examples/webworker: .eslintrc.yaml
+diff -r create-foxglove-extension/examples/webworker/package.json create-lichtblick-extension/examples/webworker/package.json
+2,3c2,3
+<   "name": "foxglove-example-webworker-extension-panel",
+<   "displayName": "Foxglove Example Webworker Extension Panel",
+---
+>   "name": "lichtblick-example-webworker-extension-panel",
+>   "displayName": "Lichtblick Example Webworker Extension Panel",
+5c5
+<   "publisher": "Foxglove",
+---
+>   "publisher": "Lichtblick",
+10,11c10,11
+<     "build": "foxglove-extension build",
+<     "foxglove:prepublish": "foxglove-extension build --mode production",
+---
+>     "build": "lichtblick-extension build",
+>     "lichtblick:prepublish": "lichtblick-extension build --mode production",
+14,16c14,16
+<     "local-install": "foxglove-extension install",
+<     "package": "foxglove-extension package",
+<     "pretest": "foxglove-extension pretest"
+---
+>     "local-install": "lichtblick-extension install",
+>     "package": "lichtblick-extension package",
+>     "pretest": "lichtblick-extension pretest"
+19,20c19,20
+<     "@foxglove/eslint-plugin": "2.0.0",
+<     "@foxglove/extension": "2.17.0",
+---
+>     "@lichtblick/eslint-plugin":"1.0.1",
+>     "@lichtblick/suite": "1.8.0",
+23,24c23,24
+<     "create-foxglove-extension": "1.0.4",
+<     "eslint": "9.15.0",
+---
+>     "create-lichtblick-extension": "1.0.0",
+>     "eslint": "8.53.0",
+diff -r create-foxglove-extension/examples/webworker/package-lock.json create-lichtblick-extension/examples/webworker/package-lock.json
+12,13c12,13
+<         "@foxglove/eslint-plugin": "2.0.0",
+<         "@foxglove/extension": "2.17.0",
+---
+>         "@lichtblick/eslint-plugin":"1.0.1",
+>         "@lichtblick/suite": "1.8.0",
+169,171c169,171
+<     "node_modules/@foxglove/extension": {
+<       "version": "2.17.0",
+<       "resolved": "https://registry.npmjs.org/@foxglove/extension/-/extension-2.17.0.tgz",
+---
+>     "node_modules/@lichtblick/suite": {
+>       "version": "1.8.0",
+>       "resolved": "https://registry.npmjs.org/@lichtblick/suite/-/extension-1.8.0.tgz",
+diff -r create-foxglove-extension/examples/webworker/README.md create-lichtblick-extension/examples/webworker/README.md
+3c3
+< This is a simple [Foxglove](http://foxglove.dev/) [extension panel](https://docs.foxglove.dev/docs/visualization/extensions/api/panel) that demonstrates how to package and run a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
+---
+> This is a simple [Lichtblick](https://github.com/Lichtblick-Suite) extension panel that demonstrates how to package and run a [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
+diff -r create-foxglove-extension/examples/webworker/src/index.ts create-lichtblick-extension/examples/webworker/src/index.ts
+1c1
+< import { ExtensionContext, PanelExtensionContext } from "@foxglove/extension";
+---
+> import { ExtensionContext, PanelExtensionContext } from "@lichtblick/suite";
+diff -r create-foxglove-extension/examples/webworker/tsconfig.json create-lichtblick-extension/examples/webworker/tsconfig.json
+2c2
+<   "extends": "create-foxglove-extension/tsconfig/tsconfig.json",
+---
+>   "extends": "create-lichtblick-extension/tsconfig/tsconfig.json",

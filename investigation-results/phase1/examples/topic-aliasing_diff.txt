@@ -1,0 +1,75 @@
+Only in create-foxglove-extension/examples/topic-aliasing: eslint.config.js
+Only in create-lichtblick-extension/examples/topic-aliasing: .eslintrc.yaml
+diff -r create-foxglove-extension/examples/topic-aliasing/package.json create-lichtblick-extension/examples/topic-aliasing/package.json
+12,13c12,13
+<     "build": "foxglove-extension build",
+<     "foxglove:prepublish": "foxglove-extension build --mode production",
+---
+>     "build": "lichtblick-extension build",
+>     "lichtblick:prepublish": "lichtblick-extension build --mode production",
+16,18c16,18
+<     "local-install": "foxglove-extension install",
+<     "package": "foxglove-extension package",
+<     "pretest": "foxglove-extension pretest"
+---
+>     "local-install": "lichtblick-extension install",
+>     "package": "lichtblick-extension package",
+>     "pretest": "lichtblick-extension pretest"
+21,22c21,22
+<     "@foxglove/eslint-plugin": "2.0.0",
+<     "@foxglove/extension": "2.17.0",
+---
+>     "@lichtblick/eslint-plugin":"1.0.1",
+>     "@lichtblick/suite": "1.8.0",
+25,26c25,26
+<     "create-foxglove-extension": "1.0.4",
+<     "eslint": "9.15.0",
+---
+>     "create-lichtblick-extension": "1.0.0",
+>     "eslint": "8.53.0",
+diff -r create-foxglove-extension/examples/topic-aliasing/package-lock.json create-lichtblick-extension/examples/topic-aliasing/package-lock.json
+12,13c12,13
+<         "@foxglove/eslint-plugin": "2.0.0",
+<         "@foxglove/extension": "2.17.0",
+---
+>         "@lichtblick/eslint-plugin":"1.0.1",
+>         "@lichtblick/suite": "1.8.0",
+17c17
+<         "eslint": "9.15.0",
+---
+>         "eslint": "8.53.0",
+174,176c174,176
+<     "node_modules/@foxglove/extension": {
+<       "version": "2.17.0",
+<       "resolved": "https://registry.npmjs.org/@foxglove/extension/-/extension-2.17.0.tgz",
+---
+>     "node_modules/@lichtblick/suite": {
+>       "version": "1.8.0",
+>       "resolved": "https://registry.npmjs.org/@lichtblick/suite/-/extension-1.8.0.tgz",
+diff -r create-foxglove-extension/examples/topic-aliasing/README.md create-lichtblick-extension/examples/topic-aliasing/README.md
+3c3
+< This is an example of a Foxglove [topic alias extension](https://docs.foxglove.dev/docs/visualization/extensions/introduction#topic-aliases-1). Topic alias extensions
+---
+> This is an example of a Lichtblick topic alias extension. Topic alias extensions
+20c20
+< To build and install the extension into your local Foxglove desktop app, run:
+---
+> To build and install the extension into your local Lichtblick desktop app, run:
+26c26
+< Open the Foxglove desktop app (or `ctrl-R` to refresh if it is already open). Your
+---
+> Open the Lichtblick desktop app (or `ctrl-R` to refresh if it is already open). Your
+47,49d46
+< 
+< See documentation here:
+< https://docs.foxglove.dev/docs/visualization/extensions/publish/#packaging-your-extension
+diff -r create-foxglove-extension/examples/topic-aliasing/src/index.ts create-lichtblick-extension/examples/topic-aliasing/src/index.ts
+1c1
+< import { ExtensionContext } from "@foxglove/extension";
+---
+> import { ExtensionContext } from "@lichtblick/suite";
+diff -r create-foxglove-extension/examples/topic-aliasing/tsconfig.json create-lichtblick-extension/examples/topic-aliasing/tsconfig.json
+2c2
+<   "extends": "create-foxglove-extension/tsconfig/tsconfig.json",
+---
+>   "extends": "create-lichtblick-extension/tsconfig/tsconfig.json",

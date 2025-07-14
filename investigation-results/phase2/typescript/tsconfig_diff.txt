@@ -1,0 +1,9 @@
+--- create-foxglove-extension/tsconfig.json	2025-07-14 03:41:58.498714307 +0000
++++ create-lichtblick-extension/tsconfig.json	2025-07-14 03:41:58.494585162 +0000
+@@ -1,5 +1,5 @@
+ {
+-  "extends": "@foxglove/tsconfig/base",
++  "extends": "@lichtblick/tsconfig/base",
+   "include": ["./src/**/*"],
+   "compilerOptions": {
+     "rootDir": "./src",

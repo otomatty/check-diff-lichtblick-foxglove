@@ -178,15 +178,63 @@ diff -u create-foxglove-extension/package.json create-lichtblick-extension/packa
 diff -u create-foxglove-extension/src/create.ts create-lichtblick-extension/src/create.ts
 ```
 
-### 次回調査予定項目
-- [ ] examples/ ディレクトリの詳細分析
-- [ ] template/ ディレクトリの差分
-- [ ] .github/ ワークフローの比較
+### 🔄 調査ログ
+#### 2025年7月14日 Phase 1.1 Examples分析 完了
+- **主要発見**: 全8サンプルで差分を確認
+- **影響度**: 🔥 最高
+- **対応要否**: 必須
+
+#### 2025年7月14日 Phase 1.2 Template分析 完了
+- **主要発見**: テンプレート構造に重要な変更
+- **影響度**: 🔥 最高
+- **対応要否**: 必須
+
+#### 2025年7月14日 Phase 2.1 CI/CD分析 完了
+- **主要発見**: ワークフロー設定に軽微な変更
+- **影響度**: 🔶 中
+- **対応要否**: 推奨
+
+#### 2025年7月14日 Phase 2.2 TypeScript設定分析 完了
+- **主要発見**: 設定継承元の変更
+- **影響度**: 🔶 中
+- **対応要否**: 必須
+
+### 完了した調査項目
+- [x] examples/ ディレクトリの詳細分析
+- [x] template/ ディレクトリの差分
+- [x] .github/ ワークフローの比較
 - [ ] 実際のextension作成テスト
 - [ ] パフォーマンス比較
+
+### 🎯 重要な追加発見
+
+#### ESLint設定の後退
+- **Foxglove**: ESLint v9.15.0 + flat config (最新)
+- **Lichtblick**: ESLint v8.53.0 + yaml config (従来)
+- **評価**: 技術的に後退している可能性
+
+#### 依存関係の重要変更
+- **@foxglove/extension v2.17.0** → **@lichtblick/suite v1.8.0**
+- バージョン番号の後退（v2→v1）は要注意
+
+#### コメント・文書の変更
+- "Foxglove system" → "studio system"
+- Foxglove固有の文書リンクが削除
+- よりジェネリックな表現に変更
+
+### 📊 調査完了度
+- **Phase 1 (高優先度)**: 100% ✅
+- **Phase 2 (中優先度)**: 100% ✅
+- **Phase 3 (低優先度)**: 0% ⏸️
+- **総合完了度**: 70%
+
+### 🔗 関連資料
+- [詳細調査レポート](investigation-results/DETAILED_INVESTIGATION_REPORT.md)
+- [調査結果サマリー](investigation-results/INVESTIGATION_SUMMARY.md)
 
 ---
 
 **調査者:** AI Assistant  
 **調査方式:** 段階的差分分析  
-**信頼度:** 高（実際のファイル内容に基づく） 
+**信頼度:** 高（実際のファイル内容に基づく）  
+**最終更新**: 2025年7月14日 

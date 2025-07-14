@@ -1,0 +1,15 @@
+--- create-foxglove-extension/examples/panel-settings/src/index.ts	2025-07-14 03:41:58.490456016 +0000
++++ create-lichtblick-extension/examples/panel-settings/src/index.ts	2025-07-14 03:41:58.490456016 +0000
+@@ -1,10 +1,10 @@
+-import { ExtensionContext } from "@foxglove/extension";
++import { ExtensionContext } from "@lichtblick/suite";
+ 
+ import { initExamplePanel } from "./ExamplePanel";
+ 
+ export function activate(extensionContext: ExtensionContext): void {
+   extensionContext.registerPanel({
+-    name: "Foxglove Panel Settings Example",
++    name: "Lichtblick Panel Settings Example",
+     initPanel: initExamplePanel,
+   });
+ }

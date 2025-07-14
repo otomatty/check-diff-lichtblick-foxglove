@@ -1,0 +1,21 @@
+{
+  "name": "${NAME}",
+  "displayName": "${NAME}",
+  "description": "",
+  "publisher": "unknown",
+  "homepage": "",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "main": "./dist/extension.js",
+  "keywords": [],
+  "scripts": {
+    "build": "lichtblick-extension build",
+    "lichtblick:prepublish": "lichtblick-extension build --mode production",
+    "lint": "eslint .",
+    "lint:ci": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "local-install": "lichtblick-extension install",
+    "package": "lichtblick-extension package",
+    "pretest": "lichtblick-extension pretest"
+  }
+}

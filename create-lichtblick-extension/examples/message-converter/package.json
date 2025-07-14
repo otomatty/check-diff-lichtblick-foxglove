@@ -1,0 +1,31 @@
+{
+  "name": "lichtblick-example-message-converter",
+  "displayName": "Lichtblick Example Message Converter",
+  "description": "",
+  "publisher": "Lichtblick",
+  "version": "1.1.1",
+  "license": "MIT",
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "lichtblick-extension build",
+    "lichtblick:prepublish": "lichtblick-extension build --mode production",
+    "lint:ci": "eslint --report-unused-disable-directives .",
+    "lint": "eslint --report-unused-disable-directives --fix .",
+    "local-install": "lichtblick-extension install",
+    "package": "lichtblick-extension package",
+    "pretest": "lichtblick-extension pretest"
+  },
+  "devDependencies": {
+    "@lichtblick/eslint-plugin":"1.0.1",
+    "@lichtblick/suite": "1.8.0",
+    "@foxglove/schemas": "1.6.4",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "create-lichtblick-extension": "1.0.0",
+    "eslint": "8.53.0",
+    "prettier": "3.3.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.7.2"
+  }
+}

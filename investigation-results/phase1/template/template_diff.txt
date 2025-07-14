@@ -1,0 +1,63 @@
+Only in create-lichtblick-extension/template: .eslintrc.yaml
+diff -r create-foxglove-extension/template/README.md create-lichtblick-extension/template/README.md
+3c3
+< [Foxglove](https://foxglove.dev) allows developers to create [extensions](https://docs.foxglove.dev/docs/visualization/extensions/introduction), or custom code that is loaded and executed inside the Foxglove application. This can be used to add custom panels. Extensions are authored in TypeScript using the `@foxglove/extension` SDK.
+---
+> [Lichtblick] allows developers to create extensions, or custom code that is loaded and executed inside the Lichtblick application. This can be used to add custom panels. Extensions are authored in TypeScript using the `@lichtblick/suite` SDK.
+15c15
+< To build and install the extension into your local Foxglove desktop app, run:
+---
+> To build and install the extension into your local Lichtblick desktop app, run:
+21c21
+< Open the Foxglove desktop (or `ctrl-R` to refresh if it is already open). Your extension is installed and available within the app.
+---
+> Open the Lichtblick desktop (or `ctrl-R` to refresh if it is already open). Your extension is installed and available within the app.
+39d38
+< See documentation here: https://docs.foxglove.dev/docs/visualization/extensions/publish/#packaging-your-extension
+Only in create-foxglove-extension/template: eslint.config.js
+diff -r create-foxglove-extension/template/package.json create-lichtblick-extension/template/package.json
+12,13c12,13
+<     "build": "foxglove-extension build",
+<     "foxglove:prepublish": "foxglove-extension build --mode production",
+---
+>     "build": "lichtblick-extension build",
+>     "lichtblick:prepublish": "lichtblick-extension build --mode production",
+17,19c17,19
+<     "local-install": "foxglove-extension install",
+<     "package": "foxglove-extension package",
+<     "pretest": "foxglove-extension pretest"
+---
+>     "local-install": "lichtblick-extension install",
+>     "package": "lichtblick-extension package",
+>     "pretest": "lichtblick-extension pretest"
+diff -r create-foxglove-extension/template/src/ExamplePanel.tsx create-lichtblick-extension/template/src/ExamplePanel.tsx
+1c1
+< import { Immutable, MessageEvent, PanelExtensionContext, Topic } from "@foxglove/extension";
+---
+> import { Immutable, MessageEvent, PanelExtensionContext, Topic } from "@lichtblick/suite";
+13c13
+<     // The render handler is run by the broader Foxglove system during playback when your panel
+---
+>     // The render handler is run by the broader studio system during playback when your panel
+23c23
+<       // rendering before the next render call, Foxglove shows a notification to the user that your panel is delayed.
+---
+>       // rendering before the next render call, studio shows a notification to the user that your panel is delayed.
+59,65d58
+<       <p>
+<         Check the{" "}
+<         <a href="https://docs.foxglove.dev/docs/visualization/extensions/introduction">
+<           documentation
+<         </a>{" "}
+<         for more details on building extension panels for Foxglove.
+<       </p>
+diff -r create-foxglove-extension/template/src/index.ts create-lichtblick-extension/template/src/index.ts
+1c1
+< import { ExtensionContext } from "@foxglove/extension";
+---
+> import { ExtensionContext } from "@lichtblick/suite";
+diff -r create-foxglove-extension/template/tsconfig.json create-lichtblick-extension/template/tsconfig.json
+2c2
+<   "extends": "create-foxglove-extension/tsconfig/tsconfig.json",
+---
+>   "extends": "create-lichtblick-extension/tsconfig/tsconfig.json",

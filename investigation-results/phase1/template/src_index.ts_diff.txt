@@ -1,0 +1,8 @@
+--- create-foxglove-extension/template/src/index.ts	2025-07-14 12:23:17
++++ create-lichtblick-extension/template/src/index.ts	2025-07-14 12:23:42
+@@ -1,4 +1,4 @@
+-import { ExtensionContext } from "@foxglove/extension";
++import { ExtensionContext } from "@lichtblick/suite";
+ 
+ import { initExamplePanel } from "./ExamplePanel";
+ 
